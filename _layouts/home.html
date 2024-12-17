@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="app-template" lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body class="app-template__body">
+
+    {%- include header.html -%}
+
+    <div class="app-width-container--homepage">
+      <div class="app-grid-row">
+        <div class="app-grid-column-full">
+          <h1 class="app-heading app-heading-m app-margin-top-3 app-margin-bottom-5 app-text-center">Higglety Pigglety</h1>
+        </div>
+      </div>
+
+      <div class="app-grid-row app-homepage-splash app-margin-bottom-3">
+        <div class="app-splash-image"></div>
+      </div>
+    </div>
+
+    <div class="app-width-container app-width-{{ page.title | downcase | escape }}">
+      <main id="main-content" class="app-main-wrapper" aria="main">
+        {{ content }}
+      </main>
+    </div>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
