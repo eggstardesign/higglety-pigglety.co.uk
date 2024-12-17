@@ -26,7 +26,7 @@ title: Home
         height="500"
         frameborder="0" style="border:0"
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCQcZd-zOaDbsz-5v-Wg3YHJascexLbA0U&q=90%20Stirling%20Street%2C%20Clackmannanshire%2C%20FK12%205EA&zoom=10"
+        src="https://www.google.com/maps/embed/v1/place?key={{ site.GOOGLE_API_KEY }}&q=90%20Stirling%20Street%2C%20Clackmannanshire%2C%20FK12%205EA&zoom=10"
         allowfullscreen aria-label="Interactive map">
       </iframe>
     </div>

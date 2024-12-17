@@ -25,6 +25,9 @@ baseurl: "" # place folder name if the site is served in a subfolder
 imagesurl: "/assets/images/"
 thumbsurl: "/assets/thumbs/"
 
+# Google Map API
+GOOGLE_API_KEY: "AIzaSyCQcZd-zOaDbsz-5v-Wg3YHJascexLbA0U"
+
 # Footer content
 copyright: © 2024. All rights reserved 
 # Social media links
