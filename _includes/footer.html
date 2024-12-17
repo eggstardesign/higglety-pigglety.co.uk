@@ -1,0 +1,45 @@
+<footer class="app-footer">
+  <div class="app-width-container app-width-{{ page.title | downcase | escape }}">
+
+    {%- if page.title != 'Home' -%}
+    <div class="app-grid-row">
+      <div class="app-grid-column-two-thirds">
+        <div class="js-map">
+          <iframe
+            width="100%"
+            height="250"
+            frameborder="0" style="border:0"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCQcZd-zOaDbsz-5v-Wg3YHJascexLbA0U&q=90%20Stirling%20Street%2C%20Clackmannanshire%2C%20FK12%205EA&zoom=10"
+            allowfullscreen aria-label="Interactive map">
+          </iframe>
+        </div>
+      </div>
+      <div class="app-grid-column-one-third">
+        <h2 class="app-heading app-heading-l">Contact us</h2>
+        <h3 class="app-heading app-heading-s">Email</h3>
+        <p class="app-body">
+          <a class="app-link app-link__email" href="mailto:info@higglety-pigglety.co.uk">info@higglety-pigglety.co.uk</a>
+        </p>
+        <h3 class="app-heading app-heading-s">Telephone</h3>
+        <p class="app-body app-margin-bottom-0">
+          <a class="app-link app-link__tel" href="tel:01259762828">01259 762828</a>
+        </p>
+      </div>
+    </div>
+    {%- endif -%}
+
+    <div class="app-grid-row{% if page.title != 'Home' %} app-margin-top-3{% endif %}">
+      <div class="app-grid-column-one-half">
+        {%- include social.html -%}
+      </div>
+
+      <div class="app-grid-column-one-half">
+        <p class="app-copyright">{{- site.copyright | escape -}}</p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="{{ "/assets/js/navigation.js" | relative_url }}"></script>
