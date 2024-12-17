@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$header-font-family: "Comfortaa", sans-serif !default;
+$header-font-optical-sizing: auto !default;
+$header-font-weight: 700 !default;
+
+// $base-font-family: Ubuntu, sans-serif !default;
+$base-font-family: "Ubuntu", sans-serif !default;
+$base-font-size: 18px !default;
+$base-font-weight: 400 !default;
+
+$small-font-size: 16px !default;
+
+$base-line-height: 1.8 !default;
+$base-letter-spacing: 1;
+
+$spacing-unit: 30px !default;
+
+$text-color: #000 !default;
+$footer-text-color: #fff !default;
+// body background color
+$background-color: #fff !default;
+$brand-color: #263f5b !default;
+
+$grey-color: #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark: darken($grey-color, 25%) !default;
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width: 960px !default;
+
+$on-handheld: 600px !default;
+$on-tablet: 900px !default;
+$on-desktop: 1300px !default;
+
+// Use media queries like this:
+// @include media-query($on-handheld) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import 
+"minima/base",
+"minima/layout",
+"minima/font",
+"minima/galleries",
+"minima/syntax-highlighting"
+;
+
+/* ==========
+Overrides 
+========== */
+
+// Homepage
+.app-width-container--homepage {
+  padding: 0 15px;
+}
+
+.app-grid-row__homepage {
+  display: flex;
+  align-items: center;
+}
+
+.app-grid-homepage {
+  margin: auto;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+.app-header__content-home {
+  width: 100%;
+
+  @include media-query($on-tablet) {
+    .navigation-items {
+      margin-top: 50px;
+    }
+  }
+}
+
+.app-homepage-splash {
+  display: block;
+  height: 35vh;
+  min-height: 100px;
+  max-height: 200px;
+  background-image: url(/assets/images/higglety-pigglety-shop-front.jpg);
+  background-position: 49% 6%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.app-splash-image {
+  background: #03c1c1;
+  opacity: 0.62;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+/* Padding overrides 
+=================== */
+
+// top padding 
+
+.app-padding-top-3 {
+  padding-top: 30px;
+}
+
+// bottom padding
+
+.app-padding-bottom-3 {
+  padding-bottom: 30px;
+}
+
+.app-padding-bottom-5 {
+  padding-bottom: 50px;
+}
+
+.app-padding-bottom-7 {
+  padding-bottom: 70px;
+}
+
+/* Margin overrides 
+=================== */
+
+// top margin 
+
+.app-margin-top-2 {
+  margin-top: 20px;
+}
+
+.app-margin-top-3 {
+  margin-top: 30px;
+}
+
+// bottom margin
+
+.app-margin-bottom-0 {
+  margin-bottom: 0;
+}
+
+.app-margin-bottom-2 {
+  margin-bottom: 20px;
+}
+
+.app-margin-bottom-3 {
+  margin-bottom: 30px;
+}
+
+.app-margin-bottom-5 {
+  margin-bottom: 50px;
+}
+
+.app-margin-bottom-7 {
+  margin-bottom: 70px;
+}
