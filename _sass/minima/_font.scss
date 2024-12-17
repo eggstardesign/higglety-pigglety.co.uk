@@ -1,0 +1,131 @@
+/* ==========
+Headings
+========== */
+
+.app-heading {
+  font-family: $header-font-family;
+  font-optical-sizing: $header-font-optical-sizing;
+  font-weight: $header-font-weight;
+  color: $brand-color;
+  letter-spacing: $base-letter-spacing;
+  font-style: normal;
+  margin-top: 0;
+  text-align: left;
+  text-transform: none;
+}
+
+.app-heading-l {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.app-heading-m {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.app-heading-s {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.app-heading-xs {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* =======
+Body 
+======= */
+
+.app-body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  letter-spacing: $base-letter-spacing;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.app-body-l {
+  font-size: 24px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.app-body-s {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+// Links
+.app-link {
+  -ms-word-break: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  color: $brand-color;
+  text-decoration: none;
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+.app-link__email,
+.app-link__tel {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* ==========
+ Logo 
+ ========= */
+
+.app-logo {
+  font-family: $header-font-family;
+  font-optical-sizing: $header-font-optical-sizing;
+  font-weight: $header-font-weight;
+  color: $brand-color;
+  letter-spacing: $base-letter-spacing;
+  font-size: 30px;
+  font-style: normal;
+  margin-top: 0;
+  line-height: 1.1;
+  text-decoration: none;
+  text-transform: none;
+  &:hover {
+    color: $text-color;
+  }
+}
+
+/* ========= 
+Contact information 
+========= */
+
+.contact {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  letter-spacing: $base-letter-spacing;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.app-footer .app-heading,
+.app-footer .app-body,
+.app-footer .app-link {
+  color: $footer-text-color;
+}
+
+// Overrides
+.app-text-center {
+  text-align: center;
+}
