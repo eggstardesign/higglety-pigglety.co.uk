@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="app-template" lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body class="app-template__body">
+
+    {%- include header.html -%}
+
+    <div class="app-width-container">
+      <main id="main-content" class="app-main-wrapper" aria="main">
+        <div class="app-grid-row">
+          <div class="app-grid-column-two-thirds">
+            <h1 class="app-heading app-heading-l">{{ page.title | escape }}</h1>
+            {%- if page.description -%}
+            <p class="app-body app-body-l">{{ page.description | escape }}</h1>
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="app-grid-row">
+          <div class="app-grid-column-full">
+          {{ content }}
+          </div>
+        </div>
+      </main>
+    </div>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
