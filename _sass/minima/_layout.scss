@@ -39,7 +39,7 @@ Layout
   padding-bottom: 20px;
 }
 
-@media (min-width: 40.0625em) {
+@media (min-width: $on-handheld) {
   .app-main-wrapper {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -65,7 +65,7 @@ Layout
   padding-left: 15px;
 }
 
-@media (min-width: 40.0625em) {
+@media (min-width: $on-handheld) {
   .app-grid-column-one-quarter {
     width: 25%;
     float: left;
@@ -78,7 +78,7 @@ Layout
   padding: 0 15px;
 }
 
-@media (min-width: 40.0625em) {
+@media (min-width: $on-handheld) {
   .app-grid-column-one-third {
     width: 33.3333333333%;
     float: left;
@@ -91,7 +91,7 @@ Layout
   padding: 0 15px;
 }
 
-@media (min-width: 40.0625em) {
+@media (min-width: $on-handheld) {
   .app-grid-column-one-half {
     width: 50%;
     float: left;
@@ -105,7 +105,7 @@ Layout
   padding: 0 15px;
 }
 
-@media (min-width: 40.0625em) {
+@media (min-width: $on-handheld) {
   .app-grid-column-two-thirds {
     width: 66.6666666667%;
     float: left;
@@ -118,7 +118,7 @@ Layout
   padding: 0 15px;
 }
 
-@media (min-width: 40.0625em) {
+@media (min-width: $on-handheld) {
   .app-grid-column-three-quarters {
     width: 75%;
     float: left;
@@ -131,7 +131,7 @@ Layout
   padding: 0 15px;
 }
 
-@media (min-width: 40.0625em) {
+@media (min-width: $on-handheld) {
   .app-grid-column-full {
     width: 100%;
     float: left;
@@ -143,7 +143,7 @@ Layout
   padding: 0 15px;
 }
 
-@media (min-width: 48.0625em) {
+@media (min-width: $on-desktop) {
   .app-grid-column-one-quarter-from-desktop {
     width: 25%;
     float: left;
@@ -155,7 +155,7 @@ Layout
   padding: 0 15px;
 }
 
-@media (min-width: 48.0625em) {
+@media (min-width: $on-desktop) {
   .app-grid-column-one-third-from-desktop {
     width: 33.3333333333%;
     float: left;
@@ -167,7 +167,7 @@ Layout
   padding: 0 15px;
 }
 
-@media (min-width: 48.0625em) {
+@media (min-width: $on-desktop) {
   .app-grid-column-one-half-from-desktop {
     width: 50%;
     float: left;
@@ -179,7 +179,7 @@ Layout
   padding: 0 15px;
 }
 
-@media (min-width: 48.0625em) {
+@media (min-width: $on-desktop) {
   .app-grid-column-two-thirds-from-desktop {
     width: 66.6666666667%;
     float: left;
@@ -191,7 +191,7 @@ Layout
   padding: 0 15px;
 }
 
-@media (min-width: 48.0625em) {
+@media (min-width: $on-desktop) {
   .app-grid-column-three-quarters-from-desktop {
     width: 75%;
     float: left;
@@ -203,7 +203,7 @@ Layout
   padding: 0 15px;
 }
 
-@media (min-width: 48.0625em) {
+@media (min-width: $on-desktop) {
   .app-grid-column-full-from-desktop {
     width: 100%;
     float: left;
@@ -286,7 +286,7 @@ Header
     color: $text-color;
   }
 }
-@media (min-width: 48.0625em) {
+@media (min-width: $on-desktop) {
   .app-header__link--homepage {
     display: inline;
   }
@@ -446,8 +446,16 @@ Footer
   border-top: 1px solid $grey-color-dark;
 
   .app-grid-row {
-    display: flex;
+    @media (min-width: $on-tablet) {
+      display: flex;
+    }
     align-items: center;
+  }
+
+  @media (max-width: $on-handheld) {
+    .js-map {
+      margin-bottom: 30px;
+    }
   }
 }
 
