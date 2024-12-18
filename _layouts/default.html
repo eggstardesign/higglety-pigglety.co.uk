@@ -7,9 +7,9 @@
 
     {%- include header.html -%}
 
-    <div class="app-width-container">
+    <div class="app-width-container {{ page.containerClasses }}">
       <main id="main-content" class="app-main-wrapper" aria="main">
-        <div class="app-grid-row">
+        <div class="app-grid-row {{ page.rowClasses }}">
           <div class="app-grid-column-two-thirds">
             <h1 class="app-heading app-heading-l">{{ page.title | escape }}</h1>
             {%- if page.description -%}
@@ -18,9 +18,7 @@
           </div>
         </div>
         <div class="app-grid-row">
-          <div class="app-grid-column-full">
           {{ content }}
-          </div>
         </div>
       </main>
     </div>
