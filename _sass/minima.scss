@@ -33,9 +33,9 @@ $table-text-align: left !default;
 // Width of the content area
 $content-width: 960px !default;
 
-$on-handheld: 600px !default;
+$on-handheld: 40.0625em !default;
 $on-tablet: 900px !default;
-$on-desktop: 1300px !default;
+$on-desktop: 1300px !default; // GOV.UK design system use 48.0625em
 
 // Use media queries like this:
 // @include media-query($on-handheld) {
@@ -73,7 +73,9 @@ Overrides
 }
 
 .app-grid-row__homepage {
-  display: flex;
+  @media (min-width: $on-desktop) {
+    display: flex;
+  }
   align-items: center;
 }
 
@@ -81,6 +83,10 @@ Overrides
   margin: auto;
   overflow: hidden;
   padding-bottom: 50px;
+
+  .app-image {
+    width: 100%;
+  }
 }
 
 .app-header__content-home {
@@ -113,6 +119,17 @@ Overrides
   width: 100%;
 }
 
+// Background colour override
+.app-page-heading-background {
+  background-color: #263f5b;
+  color: #fff;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  h1 {
+    color: #fff;
+  }
+}
+
 /* Padding overrides 
 =================== */
 
@@ -141,6 +158,14 @@ Overrides
 
 // top margin 
 
+.app-margin-top-0 {
+  margin-top: 0;
+}
+
+.app-margin-top-1 {
+  margin-top: 10px;
+}
+
 .app-margin-top-2 {
   margin-top: 20px;
 }
@@ -149,10 +174,30 @@ Overrides
   margin-top: 30px;
 }
 
+.app-margin-top-4 {
+  margin-top: 40px;
+}
+
+.app-margin-top-5 {
+  margin-top: 50px;
+}
+
+.app-margin-top-6 {
+  margin-top: 60px;
+}
+
+.app-margin-top-7 {
+  margin-top: 70px;
+}
+
 // bottom margin
 
 .app-margin-bottom-0 {
   margin-bottom: 0;
+}
+
+.app-margin-bottom-1 {
+  margin-bottom: 10px;
 }
 
 .app-margin-bottom-2 {
@@ -163,8 +208,16 @@ Overrides
   margin-bottom: 30px;
 }
 
+.app-margin-bottom-4 {
+  margin-bottom: 40px;
+}
+
 .app-margin-bottom-5 {
   margin-bottom: 50px;
+}
+
+.app-margin-bottom-6 {
+  margin-bottom: 60px;
 }
 
 .app-margin-bottom-7 {
